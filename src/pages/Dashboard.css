@@ -1,0 +1,91 @@
+/* Dashboard page styling – consistent with Medilink design */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.welcome-section {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.welcome-section h2 {
+  font-size: 2rem;
+  color: var(--text-h);
+  margin-bottom: 0.5rem;
+}
+
+.welcome-section p {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.quick-actions {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.card {
+  background: var(--bg);
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  max-width: 90%;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: var(--text-h);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin: 0.3rem 0;
+  color: var(--text);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  background: var(--bg);
+  padding: 0.5rem 0;
+  position: sticky;
+  bottom: 0;
+  border-top: 1px solid var(--border);
+}
+
+.bottom-nav .nav-item {
+  color: var(--text);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.bottom-nav .nav-item.active {
+  color: var(--primary);
+  font-weight: bold;
+}

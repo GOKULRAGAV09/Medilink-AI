@@ -1,0 +1,30 @@
+/* Header component styling – matches Medilink design */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  border-bottom: 1px solid var(--border);
+}
+
+.header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-h);
+  text-decoration: none;
+}
+
+.header .greeting {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.header .notification-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--text);
+}

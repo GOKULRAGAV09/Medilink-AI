@@ -1,0 +1,106 @@
+/* Token page styling – consistent with Medilink AI design */
+
+.token-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.token-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.back-btn {
+  background: var(--primary-light);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.current-token-card {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: var(--bg-soft);
+  padding: 1rem;
+  border-radius: 8px;
+  gap: 1rem;
+}
+
+.token-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.now-serving {
+  font-size: 1.2rem;
+  color: var(--secondary);
+}
+
+.generate-btn,
+.simulate-btn,
+.track-order-btn,
+.back-dashboard-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.queue-status {
+  background: var(--bg-soft);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.queue-status ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.queue-status li {
+  padding: 0.4rem 0;
+  font-size: 1rem;
+}
+
+.now-serving {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.your-token {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.status-message {
+  font-size: 0.9rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.notification {
+  background: var(--secondary-light);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 0.5rem;
+}

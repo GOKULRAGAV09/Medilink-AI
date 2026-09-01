@@ -1,0 +1,25 @@
+/* Quick Action Card styling – consistent with Medilink design */
+.quick-action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  background: var(--bg);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.quick-action-card .icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.quick-action-card .label {
+  font-size: 0.9rem;
+  text-align: center;
+}

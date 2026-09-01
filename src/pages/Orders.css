@@ -1,0 +1,105 @@
+/* Orders page styling – Medilink AI design */
+
+.orders-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.orders-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.back-btn {
+  background: var(--primary-light);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.order-card {
+  background: var(--bg-soft);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.order-card p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.timeline-item.completed .stage-name {
+  text-decoration: line-through;
+  color: var(--secondary);
+}
+
+.timeline-item.current .stage-name {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.indicator {
+  width: 1.2rem;
+  text-align: center;
+}
+
+.estimated-pickup,
+.medicines,
+.token-connection {
+  background: var(--bg-soft);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.medicines ul {
+  list-style: disc inside;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.actions button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.update-message {
+  color: var(--primary);
+  font-weight: bold;
+  text-align: center;
+}
