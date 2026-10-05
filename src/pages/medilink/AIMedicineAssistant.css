@@ -1,0 +1,178 @@
+﻿/* ── AI Chat ─────────────────────────────────────────────────── */
+.ai-chat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  background: var(--bg-card);
+  border: 1px solid var(--border-normal);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+/* Quick questions */
+.ai-quick-questions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  align-items: center;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-elevated);
+}
+
+.ai-quick-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.ai-quick-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-normal);
+  border-radius: var(--radius-full);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-sans);
+}
+
+.ai-quick-btn:hover {
+  background: rgba(79,142,247,0.1);
+  border-color: var(--color-primary);
+}
+
+/* Messages */
+.ai-messages {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  min-height: 300px;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.ai-msg {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.ai-msg--user {
+  flex-direction: row-reverse;
+}
+
+.ai-msg__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.ai-msg__bubble {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-5);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+  max-width: 75%;
+}
+
+.ai-msg--user .ai-msg__bubble {
+  background: rgba(79,142,247,0.1);
+  border-color: rgba(79,142,247,0.2);
+  color: var(--color-primary-light);
+}
+
+/* Typing dots */
+.ai-msg__bubble--loading {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: var(--space-4) var(--space-5);
+}
+
+.ai-typing-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  animation: typing-bounce 1.2s infinite;
+}
+
+.ai-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.ai-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-6px); opacity: 1; }
+}
+
+/* Input row */
+.ai-input-row {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-elevated);
+}
+
+.ai-input {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border-normal);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  padding: var(--space-3) var(--space-4);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.ai-input::placeholder { color: var(--text-muted); }
+
+.ai-input:focus { border-color: var(--color-primary); }
+
+.ai-send-btn {
+  background: var(--gradient-brand);
+  border: none;
+  border-radius: var(--radius-md);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: var(--space-3) var(--space-5);
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+  font-family: var(--font-sans);
+  white-space: nowrap;
+}
+
+.ai-send-btn:hover:not(:disabled) { opacity: 0.9; }
+.ai-send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .ai-msg__bubble { max-width: 90%; }
+  .ai-quick-questions { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .ai-input-row { flex-direction: column; }
+  .ai-send-btn { width: 100%; }
+  .ai-messages { min-height: 240px; }
+}

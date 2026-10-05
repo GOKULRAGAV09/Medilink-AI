@@ -1,0 +1,179 @@
+﻿/* ── Profile ─────────────────────────────────────────────────── */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.profile-section-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Language Card */
+.profile-lang-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-normal);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.profile-lang-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.profile-lang-icon { font-size: 1.5rem; }
+
+.profile-lang-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.profile-lang-sub {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.profile-lang-toggle {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.profile-lang-btn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-normal);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: var(--space-2) var(--space-5);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-sans);
+}
+
+.profile-lang-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.profile-lang-btn--active {
+  background: rgba(79,142,247,0.12);
+  border-color: rgba(79,142,247,0.4);
+  color: var(--color-primary);
+}
+
+/* Profile Card */
+.profile-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-normal);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.profile-avatar {
+  background: linear-gradient(135deg, rgba(79,142,247,0.15) 0%, rgba(124,58,237,0.1) 100%);
+  padding: var(--space-8);
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.profile-avatar__icon {
+  font-size: 4rem;
+  width: 100px;
+  height: 100px;
+  background: var(--bg-elevated);
+  border: 2px solid var(--border-normal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-info-grid { display: flex; flex-direction: column; }
+
+.profile-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--border-subtle);
+  gap: var(--space-4);
+}
+
+.profile-info-row:last-child { border-bottom: none; }
+
+.profile-info-label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.profile-info-value {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-align: right;
+}
+
+/* Status Grid */
+.profile-status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.profile-status-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-normal);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.profile-status-card:hover { box-shadow: var(--shadow-md); }
+
+.profile-status-icon { font-size: 1.5rem; }
+
+.profile-status-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.profile-status-val {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .profile-lang-card { flex-direction: column; align-items: flex-start; }
+  .profile-info-row { flex-direction: column; align-items: flex-start; }
+  .profile-info-value { text-align: left; }
+}
+
+@media (max-width: 480px) {
+  .profile-status-grid { grid-template-columns: 1fr 1fr; }
+  .profile-lang-toggle { flex-direction: column; width: 100%; }
+  .profile-lang-btn { width: 100%; text-align: center; }
+}
